@@ -4,7 +4,7 @@
 */
 .p-login {
   min-height: 100vh;
-  background-color: var(--color-surface-alt);
+  background-color: var(--color-background);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,6 +23,7 @@
 }
 .p-login__header .c-title {
   font-size: var(--font-size-4xl);
+  color: var(--color-text-base);
 }
 .p-login__header p {
   color: var(--color-text-muted);

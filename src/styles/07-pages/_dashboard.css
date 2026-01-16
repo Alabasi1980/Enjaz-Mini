@@ -24,20 +24,24 @@
 .c-stats-card {
   display: flex;
   align-items: center;
+  padding: var(--space-4);
 }
 
 .c-stats-card__icon-wrapper {
   padding: var(--space-3);
-  border-radius: 9999px;
+  border-radius: var(--border-radius-full);
   margin-left: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .c-stats-card__icon-wrapper--primary { background-color: var(--color-badge-blue-bg); }
-.c-stats-card__icon-wrapper--primary .c-icon { color: var(--color-primary); }
+.c-stats-card__icon-wrapper--primary .c-icon { color: var(--color-badge-blue-fg); }
 .c-stats-card__icon-wrapper--warning { background-color: var(--color-badge-yellow-bg); }
-.c-stats-card__icon-wrapper--warning .c-icon { color: var(--color-warning); }
+.c-stats-card__icon-wrapper--warning .c-icon { color: var(--color-badge-yellow-fg); }
 .c-stats-card__icon-wrapper--success { background-color: var(--color-badge-green-bg); }
-.c-stats-card__icon-wrapper--success .c-icon { color: var(--color-success); }
+.c-stats-card__icon-wrapper--success .c-icon { color: var(--color-badge-green-fg); }
 
 
 .c-stats-card__icon-wrapper .c-icon {
@@ -63,9 +67,14 @@
   text-align: center;
   padding: var(--space-10);
   background-color: var(--color-surface);
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
 }
+
+html.dark .c-placeholder-card {
+  border: 1px solid var(--color-border);
+}
+
 .c-placeholder-card p {
   color: var(--color-text-muted);
 }

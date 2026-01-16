@@ -8,13 +8,18 @@
   padding: var(--space-2) var(--space-4);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
-  border-radius: 0.5rem; /* rounded-lg */
+  border-radius: var(--border-radius-md);
   border: 1px solid transparent;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
   white-space: nowrap;
 }
+.c-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
 
 .c-btn--primary {
   background-color: var(--color-primary);
@@ -29,7 +34,7 @@
   color: var(--color-text-inverted);
 }
 .c-btn--success:hover {
-  background-color: #16a34a; /* green-600 */
+  filter: brightness(0.9);
 }
 
 .c-btn--block {
@@ -42,25 +47,31 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-2);
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
 }
 .c-btn-icon:hover {
   background-color: var(--color-surface-alt);
+  color: var(--color-text-base)
 }
 .c-btn-icon .c-icon {
   width: 1.5rem;
   height: 1.5rem;
   color: var(--color-text-muted);
 }
+.c-btn-icon:hover .c-icon {
+  color: var(--color-text-base);
+}
+
 
 .c-btn-icon--danger:hover {
   background-color: var(--color-badge-red-bg);
 }
-.c-btn-icon--danger .c-icon {
+.c-btn-icon--danger .c-icon,
+.c-btn-icon--danger:hover .c-icon {
   color: var(--color-danger);
 }
 
@@ -75,6 +86,7 @@
   cursor: pointer;
   text-decoration: underline;
   text-underline-offset: 2px;
+  transition: color 0.2s ease;
 }
 .c-link:hover {
   color: var(--color-primary-hover);

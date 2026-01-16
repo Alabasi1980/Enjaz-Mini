@@ -1,36 +1,44 @@
 /*
  * COLORS
- * All project color variables are defined here.
+ * All project color variables are defined here for both light and dark themes.
 */
 
 :root {
-  /* Brand Colors */
-  --color-primary: #3b82f6; /* blue-500 */
-  --color-primary-hover: #2563eb; /* blue-600 */
-  --color-primary-light: #bfdbfe; /* blue-200 */
+  /* Theme-agnostic settings */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-full: 9999px;
 
-  /* Semantic Colors */
-  --color-success: #22c55e; /* green-500 */
-  --color-warning: #f59e0b; /* amber-500 */
-  --color-danger: #ef4444; /* red-500 */
-  --color-danger-hover: #dc2626; /* red-600 */
-  --color-info: #06b6d4; /* cyan-500 */
+  /* Light Theme */
+  --color-primary: #8A2BE2;          /* BlueViolet */
+  --color-primary-hover: #7B1FA2;    /* Darker Violet */
+  --color-primary-light: #e9d5ff;    /* Light Violet */
 
-  /* Text Colors */
-  --color-text-base: #1f2937; /* gray-800 */
-  --color-text-muted: #6b7280; /* gray-500 */
-  --color-text-subtle: #9ca3af; /* gray-400 */
+  --color-success: #34D399;        /* Emerald Green */
+  --color-warning: #FBBF24;        /* Amber */
+  --color-danger: #F87171;         /* Coral Red */
+  --color-danger-hover: #ef4444;   /* Red-500 */
+  --color-info: #60A5FA;           /* Sky Blue */
+
+  --color-text-base: #1a202c;          /* Midnight Blue text */
+  --color-text-muted: #4a5568;       /* Slate 600 */
+  --color-text-subtle: #718096;      /* Slate 500 */
   --color-text-inverted: #ffffff;
   --color-text-link: var(--color-primary);
+  --color-text-sidebar: #e2e8f0;
 
-  /* Background & Surface Colors */
-  --color-background: #f9fafb; /* gray-50 */
+  --color-background: #f4f7f9;    /* Light Slate */
   --color-surface: #ffffff;
-  --color-surface-alt: #f3f4f6; /* gray-100 */
+  --color-surface-alt: #eef2f5;   /* Slightly darker slate */
+  --color-surface-sidebar: #2d3748; /* Dark Slate Gray for contrast sidebar */
   
-  /* Border & Divider Colors */
-  --color-border: #e5e7eb; /* gray-200 */
-  --color-border-light: #f3f4f6; /* gray-100 */
+  --color-border: #d3dce6;
+  --color-border-light: #eef2f5;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   /* Badge Foreground/Background pairs */
   --color-badge-gray-fg: #374151; --color-badge-gray-bg: #f3f4f6;
@@ -41,5 +49,46 @@
   --color-badge-indigo-fg: #3730a3; --color-badge-indigo-bg: #e0e7ff;
   --color-badge-purple-fg: #6b21a8; --color-badge-purple-bg: #f3e8ff;
   --color-badge-pink-fg: #9d174d; --color-badge-pink-bg: #fce7f3;
+}
 
+html.dark {
+  /* Dark Theme */
+  --color-primary: #9F7AEA;           /* Lighter Violet */
+  --color-primary-hover: #805AD5;     /* Darker, but still light */
+  --color-primary-light: rgba(159, 122, 234, 0.1);
+
+  --color-success: #48BB78;
+  --color-warning: #F6E05E;
+  --color-danger: #F56565;
+  --color-danger-hover: #fc8181;
+  --color-info: #4299E1;
+
+  --color-text-base: #f7fafc;
+  --color-text-muted: #a0aec0;
+  --color-text-subtle: #718096;
+  --color-text-inverted: #1a202c;
+  --color-text-link: var(--color-primary);
+  --color-text-sidebar: #e2e8f0;
+
+  --color-background: #1a202c;     /* Midnight Blue */
+  --color-surface: #2d3748;        /* Dark Slate Gray */
+  --color-surface-alt: #4a5568;    /* Lighter Slate Gray */
+  --color-surface-sidebar: #171923;  /* Almost Black */
+
+  --color-border: #4a5568;
+  --color-border-light: #2d3748;
+
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  
+  /* Badge Foreground/Background pairs for dark mode */
+  --color-badge-gray-fg: #e2e8f0; --color-badge-gray-bg: #4a5568;
+  --color-badge-red-fg: #fed7d7; --color-badge-red-bg: #c53030;
+  --color-badge-yellow-fg: #fefcbf; --color-badge-yellow-bg: #b7791f;
+  --color-badge-green-fg: #c6f6d5; --color-badge-green-bg: #2f855a;
+  --color-badge-blue-fg: #bee3f8; --color-badge-blue-bg: #2b6cb0;
+  --color-badge-indigo-fg: #c3dafe; --color-badge-indigo-bg: #5a67d8;
+  --color-badge-purple-fg: #e9d8fd; --color-badge-purple-bg: #805ad5;
+  --color-badge-pink-fg: #fed7e2; --color-badge-pink-bg: #b83280;
 }
