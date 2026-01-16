@@ -5,7 +5,6 @@
   <title>Enjaz-Mini App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="src/styles.css">
 <script type="importmap">
 {
@@ -22,13 +21,13 @@
     "@angular/core/rxjs-interop": "https://esm.sh/@angular/core@^21.1.0/rxjs-interop?external=rxjs",
     "@angular/core": "https://esm.sh/@angular/core@^21.1.0?external=rxjs",
     "@angular/common": "https://esm.sh/@angular/common@^21.1.0?external=rxjs",
-    "@angular/common/http": "https://esm.sh/@angular/common@^21.1.0/http?external=rxjs",
+    "@angular/common/http": "https://esm.sh/@angular/common@^21.1.0/http?conditions=es2015",
     "@angular/forms": "https://esm.sh/@angular/forms@^21.1.0?external=rxjs"
   }
 }
 </script>
 </head>
-<body class="bg-gray-100">
+<body>
   <app-root></app-root>
 </body>
 </html>

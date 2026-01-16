@@ -1,9 +1,45 @@
 /*
  * COLORS
  * All project color variables are defined here.
- * Currently, colors are primarily managed by Tailwind CSS utility classes.
 */
 
 :root {
-  /* Example: --primary-color: #007bff; */
+  /* Brand Colors */
+  --color-primary: #3b82f6; /* blue-500 */
+  --color-primary-hover: #2563eb; /* blue-600 */
+  --color-primary-light: #bfdbfe; /* blue-200 */
+
+  /* Semantic Colors */
+  --color-success: #22c55e; /* green-500 */
+  --color-warning: #f59e0b; /* amber-500 */
+  --color-danger: #ef4444; /* red-500 */
+  --color-danger-hover: #dc2626; /* red-600 */
+  --color-info: #06b6d4; /* cyan-500 */
+
+  /* Text Colors */
+  --color-text-base: #1f2937; /* gray-800 */
+  --color-text-muted: #6b7280; /* gray-500 */
+  --color-text-subtle: #9ca3af; /* gray-400 */
+  --color-text-inverted: #ffffff;
+  --color-text-link: var(--color-primary);
+
+  /* Background & Surface Colors */
+  --color-background: #f9fafb; /* gray-50 */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f3f4f6; /* gray-100 */
+  
+  /* Border & Divider Colors */
+  --color-border: #e5e7eb; /* gray-200 */
+  --color-border-light: #f3f4f6; /* gray-100 */
+
+  /* Badge Foreground/Background pairs */
+  --color-badge-gray-fg: #374151; --color-badge-gray-bg: #f3f4f6;
+  --color-badge-red-fg: #991b1b; --color-badge-red-bg: #fee2e2;
+  --color-badge-yellow-fg: #92400e; --color-badge-yellow-bg: #fef3c7;
+  --color-badge-green-fg: #065f46; --color-badge-green-bg: #d1fae5;
+  --color-badge-blue-fg: #1e40af; --color-badge-blue-bg: #dbeafe;
+  --color-badge-indigo-fg: #3730a3; --color-badge-indigo-bg: #e0e7ff;
+  --color-badge-purple-fg: #6b21a8; --color-badge-purple-bg: #f3e8ff;
+  --color-badge-pink-fg: #9d174d; --color-badge-pink-bg: #fce7f3;
+
 }

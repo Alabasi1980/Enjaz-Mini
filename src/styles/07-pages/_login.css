@@ -1,0 +1,44 @@
+/*
+ * PAGE: Login
+ * Styles specific to the login page.
+*/
+.p-login {
+  min-height: 100vh;
+  background-color: var(--color-surface-alt);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-4);
+}
+
+.p-login__container {
+  max-width: 28rem; /* max-w-md */
+  width: 100%;
+}
+
+.p-login__header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+.p-login__header .c-title {
+  font-size: var(--font-size-4xl);
+}
+.p-login__header p {
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+.p-login__card {
+  padding: var(--space-8);
+}
+
+.p-login__-info {
+  margin-top: var(--space-4);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+.p-login__-info p {
+  margin: 0;
+}

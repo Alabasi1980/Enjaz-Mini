@@ -1,10 +1,10 @@
-<div class="h-screen w-full">
+<div class="l-app">
   @if (!isLoginPage()) {
-    <div class="flex h-full">
-      <app-sidebar class="w-64 bg-gray-800 text-white shrink-0"></app-sidebar>
-      <div class="flex-1 flex flex-col overflow-hidden">
-        <app-header class="shrink-0"></app-header>
-        <main class="flex-1 overflow-y-auto p-6 md:p-8">
+    <div class="l-app__content">
+      <app-sidebar class="l-sidebar"></app-sidebar>
+      <div class="l-main">
+        <app-header class="l-header"></app-header>
+        <main class="l-main__content">
           <router-outlet></router-outlet>
         </main>
       </div>

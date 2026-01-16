@@ -51,13 +51,13 @@ export class TicketsComponent implements OnInit {
   }
 
   getPriorityClass(level: number): string {
-    if (level === 3) return 'bg-red-100 text-red-800';
-    if (level === 2) return 'bg-yellow-100 text-yellow-800';
-    return 'bg-green-100 text-green-800';
+    if (level === 3) return 'c-badge--danger';
+    if (level === 2) return 'c-badge--warning';
+    return 'c-badge--success';
   }
 
   getStatusClass(color: string | undefined): string {
-    if(!color) return 'bg-gray-100 text-gray-800';
-    return `bg-${color}-100 text-${color}-800`;
+    if(!color) return 'c-badge--default';
+    return `c-badge--${color}`;
   }
 }

@@ -1,1 +1,87 @@
-/* Base styles for <button> elements */
+/* Base styles for <button> and .c-btn elements */
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  border-radius: 0.5rem; /* rounded-lg */
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.c-btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverted);
+}
+.c-btn--primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.c-btn--success {
+  background-color: var(--color-success);
+  color: var(--color-text-inverted);
+}
+.c-btn--success:hover {
+  background-color: #16a34a; /* green-600 */
+}
+
+.c-btn--block {
+  width: 100%;
+}
+
+/* Icon Button */
+.c-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.c-btn-icon:hover {
+  background-color: var(--color-surface-alt);
+}
+.c-btn-icon .c-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.c-btn-icon--danger:hover {
+  background-color: var(--color-badge-red-bg);
+}
+.c-btn-icon--danger .c-icon {
+  color: var(--color-danger);
+}
+
+
+/* Link style button */
+.c-link {
+  color: var(--color-text-link);
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.c-link:hover {
+  color: var(--color-primary-hover);
+}
+.c-link--danger {
+  color: var(--color-danger);
+}
+.c-link--danger:hover {
+  color: var(--color-danger-hover);
+}

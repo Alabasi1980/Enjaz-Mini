@@ -3,6 +3,58 @@
  * Styles specific to the admin section.
 */
 
-.p-admin {
-  /* Example: .p-admin .some-element { ... } */
+.l-admin-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .l-admin-layout {
+    flex-direction: row;
+  }
+  .l-admin-layout__sidebar {
+    width: 25%;
+  }
+  .l-admin-layout__main {
+    width: 75%;
+  }
+}
+
+.c-admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.c-admin-nav__link {
+  padding: var(--space-2);
+  border-radius: 0.25rem;
+  text-decoration: none;
+  color: var(--color-text-base);
+  transition: background-color 0.2s;
+}
+.c-admin-nav__link:hover {
+  background-color: var(--color-surface-alt);
+}
+.c-admin-nav__link.is-active {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.c-status-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.c-status-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
 }

@@ -1,29 +1,27 @@
-<div>
-  <h2 class="text-2xl font-semibold text-gray-700 mb-4">إدارة الحالات</h2>
+<div class="p-admin-statuses">
+  <h2 class="c-title c-title--section">إدارة الحالات</h2>
   
-  <div class="mb-6 p-4 border rounded-lg bg-gray-50">
-    <h3 class="font-semibold mb-2">إضافة حالة جديدة</h3>
-    <div class="flex items-center gap-4">
-      <input type="text" placeholder="اسم الحالة" [(ngModel)]="newStatus().name" class="p-2 border rounded flex-grow">
-      <select [(ngModel)]="newStatus().color" class="p-2 border rounded">
+  <div class="c-form-card">
+    <h3 class="c-title c-title--card">إضافة حالة جديدة</h3>
+    <div class="c-form-group c-form-group--horizontal">
+      <input type="text" placeholder="اسم الحالة" [(ngModel)]="newStatus().name" class="c-input c-form-group__item--grow">
+      <select [(ngModel)]="newStatus().color" class="c-select">
         @for(color of availableColors; track color) {
           <option [value]="color">{{ color }}</option>
         }
       </select>
-      <button (click)="addStatus()" class="bg-blue-600 text-white p-2 rounded hover:bg-blue-700">إضافة</button>
+      <button (click)="addStatus()" class="c-btn c-btn--primary">إضافة</button>
     </div>
   </div>
 
-  <div class="space-y-2">
+  <div class="c-status-list">
     @for(status of statuses(); track status.id) {
-      <div class="flex justify-between items-center p-3 bg-white border rounded-lg">
-        <div>
-          <span [class]="'px-3 py-1 rounded-full text-sm font-semibold text-white bg-' + status.color + '-500'">
-            {{ status.name }}
-          </span>
-        </div>
-        <button (click)="deleteStatus(status.id)" class="text-red-500 hover:text-red-700">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div class="c-status-list__item">
+        <span [class]="'c-badge c-badge--standalone c-badge--' + status.color">
+          {{ status.name }}
+        </span>
+        <button (click)="deleteStatus(status.id)" class="c-btn-icon c-btn-icon--danger">
+          <svg xmlns="http://www.w3.org/2000/svg" class="c-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
           </svg>
         </button>

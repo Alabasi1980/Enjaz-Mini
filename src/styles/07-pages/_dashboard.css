@@ -3,6 +3,69 @@
  * Styles specific to the dashboard page.
 */
 
-.p-dashboard {
-  /* Example: .p-dashboard .stats-card { ... } */
+.c-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .c-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .c-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.c-stats-card {
+  display: flex;
+  align-items: center;
+}
+
+.c-stats-card__icon-wrapper {
+  padding: var(--space-3);
+  border-radius: 9999px;
+  margin-left: var(--space-4);
+}
+
+.c-stats-card__icon-wrapper--primary { background-color: var(--color-badge-blue-bg); }
+.c-stats-card__icon-wrapper--primary .c-icon { color: var(--color-primary); }
+.c-stats-card__icon-wrapper--warning { background-color: var(--color-badge-yellow-bg); }
+.c-stats-card__icon-wrapper--warning .c-icon { color: var(--color-warning); }
+.c-stats-card__icon-wrapper--success { background-color: var(--color-badge-green-bg); }
+.c-stats-card__icon-wrapper--success .c-icon { color: var(--color-success); }
+
+
+.c-stats-card__icon-wrapper .c-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.c-stats-card__content {
+  flex: 1;
+}
+
+.c-stats-card__label {
+  color: var(--color-text-muted);
+}
+
+.c-stats-card__value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-base);
+}
+
+.c-placeholder-card {
+  text-align: center;
+  padding: var(--space-10);
+  background-color: var(--color-surface);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+.c-placeholder-card p {
+  color: var(--color-text-muted);
 }

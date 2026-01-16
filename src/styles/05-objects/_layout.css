@@ -1,1 +1,50 @@
 /* Main application layout styles */
+.l-app {
+  height: 100vh;
+  width: 100%;
+}
+
+.l-app__content {
+  display: flex;
+  height: 100%;
+}
+
+.l-sidebar {
+  width: 256px; /* w-64 */
+  background-color: #1f2937; /* bg-gray-800 */
+  color: #f9fafb; /* text-gray-50 */
+  flex-shrink: 0;
+}
+
+.l-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.l-main__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6) var(--space-8);
+}
+
+.c-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-6);
+}
+
+.c-icon {
+  width: 1.25rem; /* h-5 w-5 */
+  height: 1.25rem;
+}
+.c-icon--lg {
+  width: 1.5rem; /* h-6 w-6 */
+  height: 1.5rem;
+}
+
+.u-text-center {
+  text-align: center;
+}

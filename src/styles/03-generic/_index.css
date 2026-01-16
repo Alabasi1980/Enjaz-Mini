@@ -3,3 +3,4 @@
  * This layer contains reset, normalize, and box-sizing rules.
  * Tailwind's preflight handles most of this.
 */
+@import './_base.css';

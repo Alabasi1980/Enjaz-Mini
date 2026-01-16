@@ -1,1 +1,41 @@
 /* Base styles for table elements */
+
+.c-table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.c-table {
+  width: 100%;
+  text-align: right;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.c-table thead {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text-base);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+}
+
+.c-table th,
+.c-table td {
+  padding: var(--space-3) var(--space-4);
+}
+
+.c-table tbody tr {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background-color 0.2s;
+}
+
+.c-table tbody tr:hover {
+  background-color: var(--color-surface-alt);
+}
+
+.c-table tbody td:first-child {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-base);
+}

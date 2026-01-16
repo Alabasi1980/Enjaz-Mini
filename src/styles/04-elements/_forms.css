@@ -1,1 +1,78 @@
 /* Base styles for form elements */
+
+.c-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.c-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.c-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-base);
+}
+
+.c-input,
+.c-select {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem; /* rounded-lg */
+  font-size: var(--font-size-base);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.c-input:focus,
+.c-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.c-form-card {
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background-color: var(--color-surface-alt);
+}
+
+.c-form-group--horizontal {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-4);
+}
+.c-form-group__item--grow {
+  flex-grow: 1;
+}
+
+.c-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .c-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.c-alert {
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-4);
+  border-radius: 0.5rem;
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.c-alert--danger {
+  background-color: var(--color-badge-red-bg);
+  color: var(--color-badge-red-fg);
+}

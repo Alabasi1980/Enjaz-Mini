@@ -1,47 +1,52 @@
-<div>
-  <div class="flex justify-between items-center mb-4">
-    <h2 class="text-2xl font-semibold text-gray-700">إدارة المستخدمين</h2>
-    <button (click)="showAddForm.set(!showAddForm())" class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 flex items-center">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
-      {{ showAddForm() ? 'إلغاء' : 'إضافة مستخدم' }}
+<div class="p-admin-users">
+  <div class="c-page-header">
+    <h2 class="c-title c-title--section">إدارة المستخدمين</h2>
+    <button (click)="showAddForm.set(!showAddForm())" class="c-btn c-btn--primary">
+      <svg xmlns="http://www.w3.org/2000/svg" class="c-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+      <span>{{ showAddForm() ? 'إلغاء' : 'إضافة مستخدم' }}</span>
     </button>
   </div>
   
   @if(showAddForm()) {
-    <div class="mb-6 p-4 border rounded-lg bg-gray-50">
-      <h3 class="font-semibold mb-2">مستخدم جديد</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input type="text" placeholder="الاسم الكامل" [(ngModel)]="newUser().name" class="p-2 border rounded">
-        <input type="email" placeholder="البريد الإلكتروني" [(ngModel)]="newUser().email" class="p-2 border rounded">
-         <select [(ngModel)]="newUser().role" class="p-2 border rounded">
+    <div class="c-form-card">
+      <h3 class="c-title c-title--card">مستخدم جديد</h3>
+      <div class="c-form-grid">
+        <input type="text" placeholder="الاسم الكامل" [(ngModel)]="newUser().name" class="c-input">
+        <input type="email" placeholder="البريد الإلكتروني" [(ngModel)]="newUser().email" class="c-input">
+         <select [(ngModel)]="newUser().role" class="c-select">
           <option value="Employee">موظف</option>
           <option value="Manager">مدير</option>
           <option value="Admin">مسؤول</option>
         </select>
-        <button (click)="addUser()" class="bg-green-500 text-white p-2 rounded hover:bg-green-600">حفظ</button>
+        <button (click)="addUser()" class="c-btn c-btn--success">حفظ</button>
       </div>
     </div>
   }
 
-  <div class="overflow-x-auto">
-    <table class="w-full text-sm text-right text-gray-500">
-      <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+  <div class="c-table-container">
+    <table class="c-table">
+      <thead>
         <tr>
-          <th class="py-3 px-6">الاسم</th>
-          <th class="py-3 px-6">البريد الإلكتروني</th>
-          <th class="py-3 px-6">الدور</th>
-          <th class="py-3 px-6">إجراءات</th>
+          <th>الاسم</th>
+          <th>البريد الإلكتروني</th>
+          <th>الدور</th>
+          <th>إجراءات</th>
         </tr>
       </thead>
       <tbody>
         @for(user of users(); track user.id) {
-          <tr class="bg-white border-b hover:bg-gray-50">
-            <td class="py-4 px-6 font-medium text-gray-900">{{ user.name }}</td>
-            <td class="py-4 px-6">{{ user.email }}</td>
-            <td class="py-4 px-6">{{ user.role }}</td>
-            <td class="py-4 px-6">
-              <button (click)="deleteUser(user.id)" class="text-red-600 hover:underline">حذف</button>
+          <tr>
+            <td data-label="الاسم">{{ user.name }}</td>
+            <td data-label="البريد الإلكتروني">{{ user.email }}</td>
+            <td data-label="الدور">{{ user.role }}</td>
+            <td data-label="إجراءات">
+              <button (click)="deleteUser(user.id)" class="c-link c-link--danger">حذف</button>
             </td>
+          </tr>
+        }
+         @if (users().length === 0) {
+          <tr>
+            <td colspan="4" class="u-text-center">لا يوجد مستخدمون لعرضهم.</td>
           </tr>
         }
       </tbody>

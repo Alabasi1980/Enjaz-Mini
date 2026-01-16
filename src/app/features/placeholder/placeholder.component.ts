@@ -5,9 +5,9 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-placeholder',
   template: `
-    <div class="text-center p-10 bg-white rounded-lg shadow-md">
-      <h1 class="text-3xl font-bold text-gray-800 mb-4">{{ title() }}</h1>
-      <p class="text-gray-600">هذه الصفحة قيد الإنشاء حالياً.</p>
+    <div class="c-placeholder-card">
+      <h1 class="c-title c-title--page">{{ title() }}</h1>
+      <p>هذه الصفحة قيد الإنشاء حالياً.</p>
     </div>
   `,
 })

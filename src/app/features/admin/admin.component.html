@@ -1,18 +1,18 @@
-<div class="p-admin container mx-auto">
-    <h1 class="text-3xl font-bold text-gray-800 mb-6">لوحة الإدارة</h1>
-    <div class="flex flex-col md:flex-row gap-8">
-        <aside class="w-full md:w-1/4">
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <nav class="flex flex-col space-y-2">
-                    <a routerLink="users" routerLinkActive="text-blue-600 font-bold" class="p-2 rounded hover:bg-gray-100">إدارة المستخدمين</a>
-                    <a routerLink="statuses" routerLinkActive="text-blue-600 font-bold" class="p-2 rounded hover:bg-gray-100">إدارة الحالات</a>
-                    <a routerLink="departments" routerLinkActive="text-blue-600 font-bold" class="p-2 rounded hover:bg-gray-100">إدارة الأقسام</a>
-                    <a routerLink="priorities" routerLinkActive="text-blue-600 font-bold" class="p-2 rounded hover:bg-gray-100">إدارة الأولويات</a>
+<div class="p-admin">
+    <h1 class="c-title c-title--page">لوحة الإدارة</h1>
+    <div class="l-admin-layout">
+        <aside class="l-admin-layout__sidebar">
+            <div class="c-card c-card--no-padding">
+                <nav class="c-admin-nav">
+                    <a routerLink="users" routerLinkActive="is-active" class="c-admin-nav__link">إدارة المستخدمين</a>
+                    <a routerLink="statuses" routerLinkActive="is-active" class="c-admin-nav__link">إدارة الحالات</a>
+                    <a routerLink="departments" routerLinkActive="is-active" class="c-admin-nav__link">إدارة الأقسام</a>
+                    <a routerLink="priorities" routerLinkActive="is-active" class="c-admin-nav__link">إدارة الأولويات</a>
                 </nav>
             </div>
         </aside>
-        <div class="w-full md:w-3/4">
-            <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="l-admin-layout__main">
+            <div class="c-card">
                 <router-outlet></router-outlet>
             </div>
         </div>
