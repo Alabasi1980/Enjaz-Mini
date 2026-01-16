@@ -1,1 +1,13 @@
-@import './styles/main.css';
+/*
+ * MAIN CSS FILE
+ * This file imports all other style partials in the correct order.
+ * Order is crucial for the cascade.
+*/
+
+@import './styles/01-settings/_index.css';
+@import './styles/02-tools/_index.css';
+@import './styles/03-generic/_index.css';
+@import './styles/04-elements/_index.css';
+@import './styles/05-objects/_index.css';
+@import './styles/06-components/_index.css';
+@import './styles/07-pages/_index.css';

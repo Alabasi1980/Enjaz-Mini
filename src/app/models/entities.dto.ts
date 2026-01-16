@@ -23,7 +23,7 @@ export interface Circle {
 export interface Status {
   id: number;
   name: string;
-  color: string; // e.g., 'blue', 'green', 'red' for tailwind colors
+  color: string; // e.g., 'blue', 'green', 'red' for css modifiers
 }
 
 export interface Priority {

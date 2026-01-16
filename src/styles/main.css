@@ -1,13 +1,1 @@
-/*
- * MAIN CSS FILE
- * This file imports all other style partials in the correct order.
- * Order is crucial for the cascade.
-*/
-
-@import './01-settings/_index.css';
-@import './02-tools/_index.css';
-@import './03-generic/_index.css';
-@import './04-elements/_index.css';
-@import './05-objects/_index.css';
-@import './06-components/_index.css';
-@import './07-pages/_index.css';
+/* This file is deprecated. Styles are now imported directly via src/styles.css */

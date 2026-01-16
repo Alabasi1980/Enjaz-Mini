@@ -1,4 +1,3 @@
-
 import '@angular/compiler';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, withHashLocation } from '@angular/router';
@@ -6,7 +5,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideZonelessChangeDetection } from '@angular/core';
 
 import { AppComponent } from './src/app/app.component';
-import { APP_ROUTES } from './src/app/app.routes';
+import { APP_ROUTES } from './src/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
