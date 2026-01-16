@@ -1,0 +1,9 @@
+/*
+ * PAGES
+ * This layer contains styles specific to individual pages.
+ * Scoped using a root class on the page container.
+*/
+
+@import './_admin.css';
+@import './_dashboard.css';
+@import './_tickets.css';

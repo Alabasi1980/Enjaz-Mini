@@ -1,0 +1,10 @@
+/*
+ * TYPOGRAPHY
+ * Font families, base sizes, weights, etc.
+ * The base font is set in styles.css via Google Fonts.
+*/
+
+:root {
+  /* Example: --font-family-sans: "Cairo", sans-serif; */
+  /* Example: --base-font-size: 16px; */
+}

@@ -1,0 +1,53 @@
+<div class="p-tickets container mx-auto">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800">قائمة التذاكر</h1>
+    <button class="bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+      تذكرة جديدة
+    </button>
+  </div>
+
+  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-right text-gray-500">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+          <tr>
+            <th scope="col" class="py-3 px-6">#</th>
+            <th scope="col" class="py-3 px-6">العنوان</th>
+            <th scope="col" class="py-3 px-6">الحالة</th>
+            <th scope="col" class="py-3 px-6">الأولوية</th>
+            <th scope="col" class="py-3 px-6">تاريخ الإنشاء</th>
+            <th scope="col" class="py-3 px-6">الإجراءات</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (ticket of tickets(); track ticket.id) {
+            <tr class="bg-white border-b hover:bg-gray-50">
+              <td class="py-4 px-6 font-medium text-gray-900">{{ ticket.id }}</td>
+              <td class="py-4 px-6">{{ ticket.title }}</td>
+              <td class="py-4 px-6">
+                 <span [class]="'px-2 py-1 rounded-full text-xs font-semibold ' + getStatusClass(ticket.status?.color)">
+                   {{ ticket.status?.name || 'غير معروف' }}
+                </span>
+              </td>
+              <td class="py-4 px-6">
+                <span [class]="'px-2 py-1 rounded-full text-xs font-semibold ' + getPriorityClass(ticket.priorityId)">
+                  {{ getPriorityText(ticket.priorityId) }}
+                </span>
+              </td>
+              <td class="py-4 px-6">{{ ticket.createdAt | date:'short' }}</td>
+              <td class="py-4 px-6">
+                <button class="text-blue-600 hover:underline">عرض</button>
+              </td>
+            </tr>
+          }
+          @if (tickets().length === 0) {
+             <tr>
+                <td colspan="6" class="text-center py-4">لا توجد تذاكر لعرضها.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

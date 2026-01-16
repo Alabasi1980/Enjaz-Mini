@@ -1,0 +1,38 @@
+
+<div class="min-h-screen bg-gray-50 flex flex-col justify-center items-center">
+  <div class="max-w-md w-full mx-auto">
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-gray-800">أهلاً بك في نظام إنجاز</h1>
+      <p class="text-gray-500 mt-2">نظام إدارة شركات المقاولات</p>
+    </div>
+    <div class="bg-white p-8 rounded-lg shadow-md">
+      <form (ngSubmit)="login()">
+        <div class="mb-6">
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-700">البريد الإلكتروني</label>
+          <input type="email" id="email" [ngModel]="email()" (ngModelChange)="email.set($event)" name="email"
+                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                 placeholder="admin@enjaz.com" required>
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-700">كلمة المرور</label>
+          <input type="password" id="password" [ngModel]="password()" (ngModelChange)="password.set($event)" name="password"
+                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                 placeholder="********" required>
+        </div>
+        @if (errorMessage()) {
+          <div class="mb-4 text-red-600 text-sm text-center">
+            {{ errorMessage() }}
+          </div>
+        }
+        <button type="submit"
+                class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">
+          تسجيل الدخول
+        </button>
+      </form>
+       <div class="mt-4 text-center text-sm text-gray-500">
+        <p>استخدم أحد الحسابات التجريبية:</p>
+        <p>admin@enjaz.com | manager@enjaz.com | employee@enjaz.com</p>
+      </div>
+    </div>
+  </div>
+</div>

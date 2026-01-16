@@ -1,0 +1,7 @@
+/*
+ * COMPONENTS
+ * This layer contains specific UI components (e.g., cards, badges, modals).
+*/
+
+@import './_badge.css';
+@import './_card.css';

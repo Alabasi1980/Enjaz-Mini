@@ -1,0 +1,5 @@
+{
+  "name": "Enjaz-Mini App",
+  "description": "A web application for a construction company management system, handling tickets, tasks, complaints, suggestions, and inquiries with a clean, layered architecture.",
+  "requestFramePermissions": []
+}

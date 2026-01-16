@@ -1,0 +1,8 @@
+/*
+ * SETTINGS
+ * This layer contains all the global variables, config switches, and maps.
+ * It should not output any CSS.
+*/
+
+@import './_colors.css';
+@import './_typography.css';
